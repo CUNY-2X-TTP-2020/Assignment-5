@@ -45,5 +45,15 @@ function removeRow()
 
 function removeColumn()
 {
+    cells = 1;
+    let grid = document.getElementById("grid");
+    let lastColumn = grid.rows[0].cells.length - 1;
 
+    for(let i = 0; i < grid.rows.length; i++)
+    {
+        for(let j = lastColumn; j > 0; j--)
+        {
+            grid.rows[i].deleteCell(j);
+        }
+    }
 }
