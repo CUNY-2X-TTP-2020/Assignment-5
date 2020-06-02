@@ -12,6 +12,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Base Styles */
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background: #191919;
+    color: white;
+    line-height: 1.5;
+}
+
 /* Side Menu */
 
 #side-menu {
@@ -31,7 +41,7 @@ html {
 #grid,
 .grid-row,
 .grid-column {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
     padding: 25px;
 }
