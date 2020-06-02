@@ -42,7 +42,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu-button {
+    background-color: darkslategray;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    display: inline-flex;
+    font-size: 18px;
+    padding: 10px;
+}
 
+.menu-button:hover {
+    background-color: darkcyan;
+}
+
+.menu-button:active {
+    position: relative;
+    top: 1px;
 }
 
 /* Grid */
