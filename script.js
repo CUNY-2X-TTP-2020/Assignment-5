@@ -151,6 +151,11 @@ let color_list = [
 ];
 let currentColor = "gray";
 
+function fillAllCells()
+{
+    
+}
+
 function fillAllUncolored()
 {
     let cells = document.getElementsByClassName("grid-cell");
