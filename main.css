@@ -22,6 +22,19 @@ body {
     line-height: 1.5;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background: darkslategray;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(112, 112, 112);
+}
+
 /* Side Menu */
 
 #side-menu {
