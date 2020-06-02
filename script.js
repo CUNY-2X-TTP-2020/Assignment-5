@@ -149,10 +149,17 @@ let color_list = [
     "#FFFFF0",
     "#FFFFFF",
 ];
+let currentColor = "gray";
+
+function changeColor()
+{
+    this.style.backgroundColor = currentColor;
+}
 
 function createCell(className) {
     let cell = document.createElement("td");
     cell.classList.add(className);
+    cell.addEventListener("click", changeColor);
     return cell;
 }
 

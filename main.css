@@ -49,6 +49,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-flex;
     font-size: 18px;
     padding: 10px;
+    margin: 5px 2px;
 }
 
 .menu-button:hover {
@@ -74,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 #grid,
 .grid-row,
 .grid-column {
-    border: 1px solid white;
+    border: 1px solid gray;
     border-collapse: collapse;
     padding: 25px;
 }
@@ -85,14 +86,12 @@ body::-webkit-scrollbar-thumb {
     border: none;
 }
 
-
 /* The container <div> - needed to position the dropdown content */
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
 
 /* Dropdown Content (Hidden by Default) */
 
@@ -106,7 +105,6 @@ body::-webkit-scrollbar-thumb {
     max-height: 100px;
 }
 
-
 /* Links inside the dropdown */
 
 .color-options a {
@@ -116,13 +114,11 @@ body::-webkit-scrollbar-thumb {
     display: block;
 }
 
-
 /* Change color of dropdown links on hover */
 
 .color-options a:hover {
     background-color: #ddd;
 }
-
 
 /* Show the dropdown menu on hover */
 
@@ -130,10 +126,10 @@ body::-webkit-scrollbar-thumb {
     display: block;
 }
 
-
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
 .dropdown:hover .drop-button {
     background-color: black;
     color: white;
+    padding: 10px;
 }
