@@ -151,14 +151,31 @@ let color_list = [
 ];
 let currentColor = "gray";
 
+function fillAllUncolored()
+{
+    let cells = document.getElementsByClassName("grid-cell");
+    let uncolored = [...cells].filter(cell => 
+    {
+        return cell.classList.contains("uncolored");
+    });
+
+    uncolored.forEach(cell =>
+    {
+        cell.style.backgroundColor = currentColor;
+        cell.classList.remove("uncolored");
+    });
+}
+
 function changeColor()
 {
     this.style.backgroundColor = currentColor;
+    this.classList.remove("uncolored");
 }
 
 function createCell(className) {
     let cell = document.createElement("td");
     cell.classList.add(className);
+    cell.classList.add("uncolored");
     cell.addEventListener("click", changeColor);
     return cell;
 }
@@ -170,7 +187,7 @@ function addRow() {
     grid.appendChild(newRow);
 
     for (let i = 0; i < cells; i++) {
-        newRow.appendChild(createCell("grid-column"));
+        newRow.appendChild(createCell("grid-cell"));
     }
 }
 
@@ -180,7 +197,7 @@ function addColumn() {
     let rows = grid.getElementsByClassName("grid-row");
 
     for (let i = 0; i < rows.length; i++) {
-        rows[i].appendChild(createCell("grid-column"));
+        rows[i].appendChild(createCell("grid-cell"));
     }
 }
 
