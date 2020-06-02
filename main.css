@@ -74,7 +74,7 @@ body::-webkit-scrollbar-thumb {
 
 #grid,
 .grid-row,
-.grid-column {
+.grid-cell {
     border: 1px solid gray;
     border-collapse: collapse;
     padding: 10px;
