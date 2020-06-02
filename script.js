@@ -255,5 +255,4 @@ function createColorMenu() {
         dropmenu.addEventListener("mouseover", function(i) { newOpTag.innerText = i; });
         // console.log(i);
     }
-
 }
