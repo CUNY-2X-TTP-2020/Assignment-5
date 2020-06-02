@@ -60,6 +60,11 @@ body::-webkit-scrollbar-thumb {
     top: 1px;
 }
 
+.menu-button:active,
+.menu-button:focus {
+    outline: none;
+}
+
 /* Grid */
 
 #grid {
