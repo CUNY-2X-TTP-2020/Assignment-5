@@ -1,10 +1,10 @@
 let cells = 1;
 
-function createCell(cell, style)
+function createCell(style)
 {
-    let c = document.createElement("td");
-    c.setAttribute('class', style);
-    cell.appendChild(c);
+    let cell = document.createElement("td");
+    cell.classList.add(style);
+    return cell;
 }
 
 function addRow()
