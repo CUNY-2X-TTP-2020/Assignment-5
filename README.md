@@ -32,4 +32,4 @@ As a user, I can:
 - fill all uncolored cells with the currently selected color
 - fill all cells with the currently selected color
 - clear all cells/restore all cells to their original/initial color
--click and hold (mouseover) from a single cell (start) to a different cell (end) such that all affected/hovered-over cells from start to end change to the currently selected color
+- click and hold (mouseover) from a single cell (start) to a different cell (end) such that all affected/hovered-over cells from start to end change to the currently selected color
