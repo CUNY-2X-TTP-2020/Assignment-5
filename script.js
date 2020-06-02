@@ -150,12 +150,12 @@ let color_list = [
     "#FFFFFF",
 ];
 let currentColor = "gray";
+let rowNum = 0;
+let selectedCell = [];
 
-function clearAllCells()
-{
+function clearAllCells() {
     let cells = document.getElementsByClassName("grid-cell");
-    [...cells].forEach(cell =>
-    {
+    [...cells].forEach(cell => {
         cell.style.backgroundColor = null;
         cell.classList.remove(...cell.classList);
         cell.classList.add("grid-cell");
@@ -163,42 +163,38 @@ function clearAllCells()
     });
 }
 
-function fillAllCells()
-{
+function fillAllCells() {
     let cells = document.getElementsByClassName("grid-cell");
-    [...cells].forEach(cell =>
-    {
+    [...cells].forEach(cell => {
         cell.style.backgroundColor = currentColor;
         cell.classList.remove("uncolored");
     });
 }
 
-function fillAllUncolored()
-{
+function fillAllUncolored() {
     let cells = document.getElementsByClassName("grid-cell");
-    let uncolored = [...cells].filter(cell => 
-    {
+    let uncolored = [...cells].filter(cell => {
         return cell.classList.contains("uncolored");
     });
 
-    uncolored.forEach(cell =>
-    {
+    uncolored.forEach(cell => {
         cell.style.backgroundColor = currentColor;
         cell.classList.remove("uncolored");
     });
 }
 
-function changeColor()
-{
+function changeColor() {
     this.style.backgroundColor = currentColor;
     this.classList.remove("uncolored");
 }
 
 function createCell(className) {
     let cell = document.createElement("td");
+    cell.id = rowNum;
     cell.classList.add(className);
     cell.classList.add("uncolored");
     cell.addEventListener("click", changeColor);
+    rowNum++
     return cell;
 }
 
@@ -211,6 +207,7 @@ function addRow() {
     for (let i = 0; i < cells; i++) {
         newRow.appendChild(createCell("grid-cell"));
     }
+    openLoop();
 }
 
 function addColumn() {
@@ -221,6 +218,7 @@ function addColumn() {
     for (let i = 0; i < rows.length; i++) {
         rows[i].appendChild(createCell("grid-cell"));
     }
+    openLoop();
 }
 
 function removeRows() {
@@ -230,6 +228,7 @@ function removeRows() {
     for (let i = lastRow; i > 0; i--) {
         grid.deleteRow(i);
     }
+    openLoop();
 }
 
 function removeColumns() {
@@ -242,18 +241,59 @@ function removeColumns() {
             grid.rows[i].deleteCell(j);
         }
     }
+    openLoop();
 }
 
 function createColorMenu() {
     //this function creates dropdown menu for all 140 color available in mordern day browser
     let dropmenu = document.getElementById("drop");
-    for (let i of color_list) {
+    for (let color of color_list) {
         var newOpTag = document.createElement("option");
-        newOpTag.style.background = i;
-        newOpTag.nodeValue = i;
+        newOpTag.style.background = color;
+        newOpTag.value = color;
+        newOpTag.id = color;
         dropmenu.appendChild(newOpTag);
-        dropmenu.addEventListener("mouseover", function(i) { newOpTag.innerText = i; });
-        // console.log(i);
     }
+    for (let color of color_list) {
+        var currentTag = document.getElementById(color);
+        currentTag.addEventListener("click", () => {
+            currentColor = color;
+        });
+    }
+}
 
+function dropMenu() {
+    let menu = document.getElementById("drop");
+    menu.style.display = "block";
+}
+
+function openLoop() {
+
+    let cells = document.getElementsByClassName("grid-cell");
+    [...cells].forEach((cell) => {
+        cell.addEventListener("mouseover", (e) => {
+            cell.style.borderColor = "blue";
+        });
+        cell.addEventListener("click", () => {
+
+            cell.style.borderColor = "red";
+            selectedCell.push(cell);
+        })
+        cell.addEventListener("onmouseleave", () => {
+            cell.style.borderColor = "inherit"
+        });
+        // if (cell.onmousedown && cell.onmoused)
+    });
+}
+
+function changeSelected() {
+    selectedCell.forEach(cell => {
+        cell.style.backgroundColor = currentColor;
+    })
+}
+
+function removeSelected() {
+    selectedCell.forEach(cell => {
+        cell.remove();
+    });
 }
