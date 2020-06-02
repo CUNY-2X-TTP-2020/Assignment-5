@@ -151,6 +151,21 @@ let color_list = [
 ];
 let currentColor = "gray";
 
+function fillAllUncolored()
+{
+    let cells = document.getElementsByClassName("grid-cell");
+    let uncolored = [...cells].filter(cell => 
+    {
+        return cell.classList.contains("uncolored");
+    });
+
+    uncolored.forEach(cell =>
+    {
+        cell.style.backgroundColor = currentColor;
+        cell.classList.remove("uncolored");
+    });
+}
+
 function changeColor()
 {
     this.style.backgroundColor = currentColor;
