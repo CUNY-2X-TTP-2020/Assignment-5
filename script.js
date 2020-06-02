@@ -1,9 +1,16 @@
 let cells = 1;
+let currentColor = "gray";
+
+function changeColor()
+{
+    this.style.backgroundColor = currentColor;
+}
 
 function createCell(className)
 {
     let cell = document.createElement("td");
     cell.classList.add(className);
+    cell.addEventListener("click", changeColor);
     return cell;
 }
 
