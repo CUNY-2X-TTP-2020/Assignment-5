@@ -172,7 +172,7 @@ function addRow() {
     grid.appendChild(newRow);
 
     for (let i = 0; i < cells; i++) {
-        newRow.appendChild(createCell("grid-column"));
+        newRow.appendChild(createCell("grid-cell"));
     }
 }
 
@@ -182,7 +182,7 @@ function addColumn() {
     let rows = grid.getElementsByClassName("grid-row");
 
     for (let i = 0; i < rows.length; i++) {
-        rows[i].appendChild(createCell("grid-column"));
+        rows[i].appendChild(createCell("grid-cell"));
     }
 }
 
