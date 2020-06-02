@@ -16,9 +16,7 @@ function addRow()
 
     for(let i = 0; i < cells; i++)
     {
-        let cell = document.createElement("td");
-        cell.classList.add("grid-column");
-        newRow.appendChild(cell);
+        newRow.appendChild(createCell("grid-column"));
     }
 }
 
@@ -30,9 +28,7 @@ function addColumn()
 
     for(let i = 0; i < rows.length; i++)
     {
-        let cell = document.createElement("td");
-        cell.classList.add("grid-column");
-        rows[i].appendChild(cell);
+        rows[i].appendChild(createCell("grid-column"));
     }
 }
 
