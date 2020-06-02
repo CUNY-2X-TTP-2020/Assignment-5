@@ -1,9 +1,9 @@
 let cells = 1;
 
-function createCell(style)
+function createCell(className)
 {
     let cell = document.createElement("td");
-    cell.classList.add(style);
+    cell.classList.add(className);
     return cell;
 }
 
