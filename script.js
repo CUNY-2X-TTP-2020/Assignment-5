@@ -32,7 +32,7 @@ function addColumn()
     }
 }
 
-function removeRow()
+function removeRows()
 {
     let grid = document.getElementById("grid");
     let lastRow = grid.rows.length - 1;
@@ -43,7 +43,7 @@ function removeRow()
     }
 }
 
-function removeColumn()
+function removeColumns()
 {
     cells = 1;
     let grid = document.getElementById("grid");
