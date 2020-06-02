@@ -153,7 +153,12 @@ let currentColor = "gray";
 
 function fillAllCells()
 {
-    
+    let cells = document.getElementsByClassName("grid-cell");
+    [...cells].forEach(cell =>
+    {
+        cell.style.backgroundColor = currentColor;
+        cell.classList.remove("uncolored");
+    });
 }
 
 function fillAllUncolored()
