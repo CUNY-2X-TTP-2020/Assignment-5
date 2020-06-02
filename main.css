@@ -1,3 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/* Defaults */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Base Styles */
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background: #191919;
+    color: white;
+    line-height: 1.5;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background: darkslategray;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(112, 112, 112);
+}
+
+/* Side Menu */
+
+#side-menu {
+
+}
+
+.menu-button {
+    background-color: darkslategray;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    display: inline-flex;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu-button:hover {
+    background-color: darkcyan;
+}
+
+.menu-button:active {
+    position: relative;
+    top: 1px;
+}
+
+.menu-button:active,
+.menu-button:focus {
+    outline: none;
+}
+
+/* Grid */
+
 #grid {
     margin: 25px;
 }
@@ -5,7 +74,7 @@
 #grid,
 .grid-row,
 .grid-column {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
     padding: 25px;
 }
