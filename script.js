@@ -1,5 +1,12 @@
 let cells = 1;
 
+function createCell(cell, style)
+{
+    let c = document.createElement("td");
+    c.setAttribute('class', style);
+    cell.appendChild(c);
+}
+
 function addRow()
 {
     let grid = document.getElementById("grid");
