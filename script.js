@@ -31,7 +31,13 @@ function addColumn()
 
 function removeRow()
 {
+    let grid = document.getElementById("grid");
+    let lastRow = grid.rows.length - 1;
 
+    for(let i = lastRow; i > 0; i--)
+    {
+        grid.deleteRow(i);
+    }
 }
 
 function removeColumn()
