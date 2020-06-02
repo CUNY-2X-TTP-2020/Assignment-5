@@ -248,7 +248,7 @@ function createColorMenu() {
     //this function creates dropdown menu for all 140 color available in mordern day browser
     let dropmenu = document.getElementById("drop");
     for (let color of color_list) {
-        var newOpTag = document.createElement("option");
+        var newOpTag = document.createElement("a");
         newOpTag.style.background = color;
         newOpTag.value = color;
         newOpTag.id = color;
@@ -271,9 +271,7 @@ function openLoop() {
 
     let cells = document.getElementsByClassName("grid-cell");
     [...cells].forEach((cell) => {
-        cell.addEventListener("mouseover", (e) => {
-            cell.style.borderColor = "blue";
-        });
+
         cell.addEventListener("click", () => {
 
             cell.style.borderColor = "red";
@@ -290,10 +288,4 @@ function changeSelected() {
     selectedCell.forEach(cell => {
         cell.style.backgroundColor = currentColor;
     })
-}
-
-function removeSelected() {
-    selectedCell.forEach(cell => {
-        cell.remove();
-    });
 }
