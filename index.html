@@ -4,9 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Assignment 5</title>
+
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="main.css">
     </head>
 
     <body>
-        
+        <section id="side-menu">
+            <button class="menu-button" onClick="addRow()">Add Row</button>
+            <button class="menu-button" onClick="addColumn()">Add Column</button>
+            <button class="menu-button" onClick="removeRows()">Remove Rows</button>
+            <button class="menu-button" onClick="removeColumns()">Remove Columns</button>
+        </section>
+
+        <table id="grid">
+            <tr class="grid-row">
+                <td class="grid-column"></td>
+            </tr>
+        </table>
     </body>
 </html>
