@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
+/* Defaults */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 /* Side Menu */
 
 #side-menu {
