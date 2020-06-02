@@ -17,7 +17,16 @@ function addRow()
 
 function addColumn()
 {
+    cells++;
+    let grid = document.getElementById("grid");
+    let rows = grid.getElementsByClassName("grid-row");
 
+    for(let i = 0; i < rows.length; i++)
+    {
+        let cell = document.createElement("td");
+        cell.classList.add("grid-column");
+        rows[i].appendChild(cell);
+    }
 }
 
 function removeRow()
