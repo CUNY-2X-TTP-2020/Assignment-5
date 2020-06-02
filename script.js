@@ -154,11 +154,13 @@ let currentColor = "gray";
 function changeColor()
 {
     this.style.backgroundColor = currentColor;
+    this.classList.remove("uncolored");
 }
 
 function createCell(className) {
     let cell = document.createElement("td");
     cell.classList.add(className);
+    cell.classList.add("uncolored");
     cell.addEventListener("click", changeColor);
     return cell;
 }
