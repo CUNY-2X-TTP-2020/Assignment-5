@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Assignment 5</title>
 
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="main.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
 
-    <body>
-        <section id="side-menu">
-            <button class="menu-button" onClick="addRow()">Add Row</button>
-            <button class="menu-button" onClick="addColumn()">Add Column</button>
-            <button class="menu-button" onClick="removeRows()">Remove Rows</button>
-            <button class="menu-button" onClick="removeColumns()">Remove Columns</button>
-        </section>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
 
-        <table id="grid">
-            <tr class="grid-row">
-                <td class="grid-column"></td>
-            </tr>
-        </table>
-    </body>
+<body onload="createColorMenu()">
+    <section id="side-menu">
+        <button class="menu-button" onClick="addRow()">Add Row</button>
+        <button class="menu-button" onClick="addColumn()">Add Column</button>
+        <button class="menu-button" onClick="removeRows()">Remove Rows</button>
+        <button class="menu-button" onClick="removeColumns()">Remove Columns</button>
+        <div class="dropdown">
+            <button class="menu-button"> Color Selection</button>
+            <select class="color-options" id="drop">
+            </select>
+        </div>
+    </section>
+
+    <table id="grid">
+        <tr class="grid-row">
+            <td class="grid-column"></td>
+        </tr>
+    </table>
+</body>
+
 </html>

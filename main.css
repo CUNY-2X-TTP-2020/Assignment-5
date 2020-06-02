@@ -77,5 +77,59 @@ body::-webkit-scrollbar-thumb {
 .grid-column {
     border: 1px solid gray;
     border-collapse: collapse;
+    padding: 25px;
+}
+
+.drop-button {
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.color-options {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 100px;
+}
+
+/* Links inside the dropdown */
+
+.color-options a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.color-options a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .color-options {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .drop-button {
+    background-color: black;
+    color: white;
     padding: 10px;
 }
